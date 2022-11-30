@@ -1,0 +1,88 @@
+{
+  "basics": {
+      "name": "",
+      "label": "",
+      "email": "",
+      "phone": "",
+      "url": "",
+      "summary": "",
+      "location": {
+          "address": "",
+          "postalCode": "",
+          "city": "",
+          "countryCode": "",
+          "region": ""
+      }
+  },
+  "work": [
+      {
+          "name": "",
+          "location": "",
+          "description": "",
+          "position": "",
+          "url": "",
+          "startDate": "",
+          "endDate": "",
+          "summary": "",
+          "highlights": [
+          ]
+      }
+  ],
+  "volunteer": [
+      {
+          "organization": "",
+          "startDate": "",
+          "endDate": "",
+          "summary": "",
+          "highlights": [
+          ]
+      }
+  ],
+  "education": [
+      {
+          "institution": "",
+          "area": "",
+          "studyType": "",
+          "startDate": "",
+          "endDate": ""
+      }
+  ],
+  "awards": [
+      {
+          "title": "",
+          "date": "",
+          "awarder": "",
+          "summary": ""
+      }
+  ],
+  "publications": [
+      {
+          "name": "",
+          "publisher": "",
+          "releaseDate": "",
+          "url": "",
+          "summary": ""
+      }
+  ],
+  "skills": [
+      {
+          "name": "",
+          "level": "",
+          "keywords": [
+          ]
+      }
+  ],
+  "projects": [
+      {
+          "name": "",
+          "description": "",
+          "highlights": [
+          ],
+          "keywords": [
+          ],
+          "startDate": "",
+          "endDate": "",
+          "url": ""
+      }
+  ]
+}

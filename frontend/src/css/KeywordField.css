@@ -1,0 +1,30 @@
+.keywordBox {
+    /* background-color: red; */
+    width: 37em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.fieldRow {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.keyword {
+    border: 1px solid #797979;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2em;
+    margin: 0.2em;
+    margin-top: 0.5em;
+}
+
+.keywordneed {
+    border: 1px solid #911919;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2em;
+    margin: 0.2em;
+    margin-top: 0.5em;
+}

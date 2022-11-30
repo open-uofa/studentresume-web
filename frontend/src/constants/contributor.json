@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Ivan Zhang",
+        "role": "Frontend Developer",
+        "linkedin": "",
+        "github": "https://github.com/IvanZyf666/"
+    },
+    {
+        "id": "2",
+        "name": "Mohammed Alzafarani",
+        "role": "Frontend Developer",
+        "linkedin": "",
+        "github": ""
+    },
+    {
+        "id": "3",
+        "name": "YiJing Qu",
+        "role": "Frontend Developer",
+        "linkedin": "",
+        "github": ""
+    },
+    {
+        "id": "4",
+        "name": "Curtis Kennedy",
+        "role": "Backend Developer",
+        "linkedin": "",
+        "github": ""
+    },
+    {
+        "id": "5",
+        "name": "Jason Robock",
+        "role": "Backend Developer",
+        "linkedin": "",
+        "github": ""
+    },
+    {
+        "id": "6",
+        "name": "Diana Le",
+        "role": "Backend Developer",
+        "linkedin": "",
+        "github": ""
+    }
+]

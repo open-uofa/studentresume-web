@@ -1,0 +1,43 @@
+.preview_page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #f9f6f2;
+}
+
+.topBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #265c3b;
+    color: #FFFFFF;
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.section-body {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    flex-wrap: wrap;
+}
+
+.button_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 20px;
+    width: 100%;
+}

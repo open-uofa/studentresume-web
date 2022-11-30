@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`First snapshot test 1`] = `
+<div>
+  <div
+    className="main_page"
+  >
+    <h2
+      style={
+        Object {
+          "alignItems": "left",
+          "fontWeight": "normal",
+          "marginLeft": "2%",
+          "marginTop": "1.5%",
+        }
+      }
+    >
+      Student
+      <b>
+        Resume
+      </b>
+    </h2>
+    <p
+      href="#doc_link"
+      style={
+        Object {
+          "marginRight": "2%",
+          "marginTop": "1.5%",
+          "position": "absolute",
+          "right": "2em",
+        }
+      }
+    >
+      Never heard of JSON? Click 
+      <a
+        data-testid="docJSON"
+        href="https://www.json.org/json-en.html"
+      >
+        here
+      </a>
+       for documentation
+    </p>
+    <div
+      className="MuiBox-root css-1j4a9v9"
+    >
+      <h1
+        style={
+          Object {
+            "color": "#464646",
+            "fontSize": "50px",
+            "margin": "2%",
+            "marginBottom": "4%",
+            "textAlign": "center",
+          }
+        }
+      >
+        How would you like to start?
+      </h1>
+      <div
+        className="MuiBox-root css-aon0ne"
+      >
+        <a
+          href="/form"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="MuiBox-root css-1obf42f"
+            data-testid="goToForm"
+          >
+            <div
+              className="MuiBox-root css-ggl79w"
+            >
+              <img
+                alt=""
+                height="100%"
+                src="resume.png"
+                width="75%"
+              />
+            </div>
+            <div
+              className="MuiBox-root css-1wsrftx"
+            >
+              <h3
+                style={
+                  Object {
+                    "color": "#464646",
+                    "fontSize": "25px",
+                    "margin": "2%",
+                    "marginTop": "7%",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Create a New Resume
+              </h3>
+              <h4
+                style={
+                  Object {
+                    "color": "#A9A9A9",
+                    "fontSize": "16px",
+                    "margin": "2%",
+                    "marginTop": "4%",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                We'll guide you through each resume section!
+              </h4>
+            </div>
+          </div>
+        </a>
+        <div
+          className="MuiBox-root css-con467"
+        >
+          <div
+            className="MuiBox-root css-bhj89f"
+          >
+            <div
+              className="center"
+            >
+              <div
+                className="drag_drop_text2"
+                style={
+                  Object {
+                    "color": "#464646",
+                    "fontSize": "15px",
+                    "margin": "2%",
+                    "marginBottom": "4%",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Only JSON files are allowed
+              </div>
+              <div
+                className="drag_drop"
+                data-testid="dragdrop"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragEnter={[Function]}
+                onDragLeave={[Function]}
+                onDragOver={[Function]}
+                onDrop={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="presentation"
+                tabIndex={0}
+              >
+                <input
+                  accept=".json,.json"
+                  multiple={true}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "display": "none",
+                    }
+                  }
+                  tabIndex={-1}
+                  type="file"
+                />
+                <img
+                  alt=""
+                  height="70%"
+                  src="file_icon.png"
+                  width="30%"
+                />
+                <h5
+                  style={
+                    Object {
+                      "color": "#464646",
+                      "fontSize": "15px",
+                      "margin": "2%",
+                      "marginBottom": "4%",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Drag and Drop your files here
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiBox-root css-1wsrftx"
+          >
+            <h3
+              style={
+                Object {
+                  "color": "#464646",
+                  "fontSize": "25px",
+                  "margin": "2%",
+                  "marginTop": "7%",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Upload my JSON File
+            </h3>
+            <h4
+              style={
+                Object {
+                  "color": "#A9A9A9",
+                  "fontSize": "16px",
+                  "margin": "2%",
+                  "marginTop": "4%",
+                  "textAlign": "center",
+                }
+              }
+            >
+              We'll move everything to the fill out form!
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
