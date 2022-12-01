@@ -15,10 +15,20 @@ exports[`First snapshot test 1`] = `
         }
       }
     >
-      Student
-      <b>
-        Resume
-      </b>
+      <a
+        href="/"
+        style={
+          Object {
+            "color": "black",
+            "textDecoration": "none",
+          }
+        }
+      >
+        Student
+        <b>
+          Resume
+        </b>
+      </a>
     </h2>
     <p
       href="#doc_link"
@@ -41,13 +51,13 @@ exports[`First snapshot test 1`] = `
        for documentation
     </p>
     <div
-      className="MuiBox-root css-1j4a9v9"
+      className="MuiBox-root css-wr1gou"
     >
       <h1
         style={
           Object {
             "color": "#464646",
-            "fontSize": "50px",
+            "fontSize": "3em",
             "margin": "2%",
             "marginBottom": "4%",
             "textAlign": "center",
@@ -57,20 +67,24 @@ exports[`First snapshot test 1`] = `
         How would you like to start?
       </h1>
       <div
-        className="MuiBox-root css-aon0ne"
+        className="MuiBox-root css-5potxl"
       >
         <a
           href="/form"
           onClick={[Function]}
           style={
             Object {
+              "marginBottom": "1em",
+              "maxWidth": "90%",
               "textDecoration": "none",
+              "width": "30em",
             }
           }
         >
           <div
-            className="MuiBox-root css-1obf42f"
+            className="MuiBox-root css-1n3ng8a"
             data-testid="goToForm"
+            id="goToForm"
           >
             <div
               className="MuiBox-root css-ggl79w"
@@ -115,7 +129,7 @@ exports[`First snapshot test 1`] = `
           </div>
         </a>
         <div
-          className="MuiBox-root css-con467"
+          className="MuiBox-root css-1l3dbio"
         >
           <div
             className="MuiBox-root css-bhj89f"
@@ -219,6 +233,23 @@ exports[`First snapshot test 1`] = `
         </div>
       </div>
     </div>
+    <p
+      style={
+        Object {
+          "flexBasis": "100%",
+          "margin": "1.5em auto",
+          "textAlign": "center",
+        }
+      }
+    >
+      Wanna know more about the development team? Click 
+      <a
+        href="/about"
+        onClick={[Function]}
+      >
+        here
+      </a>
+    </p>
   </div>
 </div>
 `;
