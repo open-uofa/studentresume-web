@@ -1,5 +1,6 @@
 import React from 'react';
 
+// shows a list of the info that the user inputted
 const ReviewField = (props) => {
     const { title, data } = props;
 

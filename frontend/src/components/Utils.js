@@ -1,3 +1,4 @@
+// rename for the correct section
 const map = {
     basics: "Personal Information",
     work: "Work Experience",
@@ -12,14 +13,17 @@ const map = {
     projects: "Projects"
 }
 
+// getter for the section name by the keyword
 const getSectionNameByKeyword = (keyword) => {
     return map[keyword];
 }
 
+// getter for the section name
 const getSectionName = (input) => {
     return Object.keys(input)[0];
 }
 
+// hardcoded hint map
 const HintMap = {
     "basics": "Please fill out your basic information",
     "work": "Please fill out your work experience",
@@ -78,12 +82,13 @@ const HintMap = {
     // ...
 }
 
+// getter for the hint by the section and field
 const getHint = (key) => {
     return HintMap[key];
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// hardcoded for must fill out fields
 const field_basic = ["name", "email", "phone", "url", "summary", "location", "profiles"]; //profile and location are list
 const field_education = ["institution", "url", "area", "studyType", "startDate", "endDate", "score"];
 const field_skills = ["name", "level", "keywords"]; //keywords is list
@@ -97,6 +102,7 @@ const mand_sections = ["basics", "education", "skills"];
 const all_sections = ["basics", "education", "skills", "work", "volunteer", "awards", "publications", "projects", "languages", "interests", "references"];
 const selected_sections = new Set([]);
 
+// getter for the must fill out fields by the section
 const checkRequiredField = (section, field) => {
     if (section === "basics") {
         if (field === "name" || field === "email" || field === "phone" || field === "summary" || field === "url" || field === "location") {
@@ -136,6 +142,7 @@ const checkRequiredField = (section, field) => {
 
 }
 
+// check if the field is completed for the required fields or not
 const checkSectionComplete = (sectionName, sectionData, onUpdateSectionComplete) => {
     let isComplete = true;
     switch (sectionName) {
@@ -223,4 +230,5 @@ const checkSectionComplete = (sectionName, sectionData, onUpdateSectionComplete)
     onUpdateSectionComplete(sectionName, isComplete);
 }
 
+// must export the fucntion to be used in other files
 export { getSectionNameByKeyword, getSectionName, getHint, checkSectionComplete, checkRequiredField, mand_sections, all_sections, selected_sections };

@@ -10,7 +10,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import fileDownload from 'js-file-download'
 import { validateForm } from '../actions/forms';
 
-
+// same as FormPage.js, but for mobile
 const FormPageForMobile = (props) => {
     // get user data from props
     const { userData, sectionComplete, onUpdateChange, onAddEntry, onDeleteEntry, onAddKeyword, onDeleteKeyword, setUploading, onUpdateSectionComplete, onLoadingLocalStorage, onSavingLocalStorage, cleanLocalStorage } = props;

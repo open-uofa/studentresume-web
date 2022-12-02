@@ -11,7 +11,7 @@ import Divider from '@mui/material/Divider';
 
 import '../css/ReviewPage.css';
 
-
+// the basis of the review page
 const ReviewPage = (props) => {
     const navigate = useNavigate();
     const { userData, setUploading, onLoadingLocalStorage } = props;
@@ -55,6 +55,7 @@ const ReviewPage = (props) => {
                         height: 'auto',
                         margin: '2em auto',
                     }}>
+                        {/* get info from ReviewField.js */}
                         {Object.keys(userData).filter((key) => key !== "meta").map((sectionName, index) => {
                             return (
                                 <Box sx={{

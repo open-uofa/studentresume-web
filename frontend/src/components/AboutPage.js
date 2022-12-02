@@ -11,6 +11,7 @@ import { faThumbsUp as faThumbsUp2 } from '@fortawesome/free-solid-svg-icons'
 library.add(fab, faThumbsUp1, faThumbsUp2)
 
 const AboutPage = () => {
+    // show the about page of developer team and the project link to github
     const heading = "Meet Our Team";
     let i = 0;
     const typing = () => {

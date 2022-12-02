@@ -9,7 +9,7 @@ import jsonDownload from '../img/jsonDownload.png';
 import pdfDownload from '../img/pdfDownload.png';
 import backToForm from '../img/backToForm.png';
 
-
+// display the preview of the generated resume
 const PreviewPage = (props) => {
     const { userData } = props;
     const { state } = useLocation();
@@ -60,6 +60,7 @@ const PreviewPage = (props) => {
                     float: 'left',
                 }}
                 >
+                    {/* the display preview of the resume */}
                     <iframe src={`${fileURL}#view=fitH`} width="100%" height="100%"></iframe>
 
                 </Box>
@@ -71,6 +72,7 @@ const PreviewPage = (props) => {
                     borderRadius: "20px",
                     backgroundColor: '#E2E2E2',
                 }}>
+                    {/* to rechoose theme */}
                     <Link to="/theme" style={{ textDecoration: 'none' }}>
                         <Box
                             data-testid={'goToThemePage'}
@@ -109,6 +111,7 @@ const PreviewPage = (props) => {
                     </Link>
 
                     {isMobile && <Fragment>
+                        {/* button that saves the resume as a pdf */}
                         <Box
                             data-testid={'savePDF'}
                             sx={{
@@ -143,6 +146,7 @@ const PreviewPage = (props) => {
                                 <h5 style={{ textAlign: 'center', margin: '2%', marginTop: '4%', fontSize: '20px', color: 'white' }}>Download PDF</h5>
                             </Box>
                         </Box>
+                        {/* button that saves the resume as a json */}
                         <Box
                             data-testid={'savePDF'}
                             sx={{
@@ -179,7 +183,10 @@ const PreviewPage = (props) => {
                         </Box>
                     </Fragment>}
 
+
+                    {/* check if mobile user and change the placement of the buttons */}
                     {!isMobile && <Fragment>
+                        {/* button that saves the resume as a pdf */}
                         <Box
                             clickable
                             data-testid={'savePDF'}
@@ -216,6 +223,8 @@ const PreviewPage = (props) => {
 
                             </Box>
                         </Box>
+
+                        {/* button that saves the resume as a json */}
                         <Box
                             data-testid={'saveJSON'}
                             sx={{
@@ -253,6 +262,7 @@ const PreviewPage = (props) => {
                     </Fragment>}
 
 
+                    {/* button that takes the user back to the form to edit info*/} 
                     <Link to="/form" style={{ textDecoration: 'none' }}>
                         <Box
                             id='backToForm'

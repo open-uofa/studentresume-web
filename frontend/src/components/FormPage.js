@@ -11,7 +11,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import fileDownload from 'js-file-download'
 import { validateForm } from '../actions/forms';
 
-
+// this is thhe whole form page that contains all the sections and textbox
 const FormPage = (props) => {
     // get user data from props
     const { userData, sectionComplete, onUpdateChange, onAddEntry, onDeleteEntry, onDeleteSection, onAddKeyword, onDeleteKeyword, setUploading, onUpdateSectionComplete, onLoadingLocalStorage, onSavingLocalStorage, cleanLocalStorage } = props;

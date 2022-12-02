@@ -6,6 +6,7 @@ import KeywordField from './KeywordField';
 import LocationPicker from './LocationPicker';
 // import { useFormik } from 'formik';
 
+// gererate a form field boxes
 const FormField = (props) => {
     const { id, title, index, fieldValue, onUpdateChange, onAddKeyword, onDeleteKeyword } = props;
     const isContentField = id === "summary" || id === "description" || id === "highlights";
@@ -17,7 +18,7 @@ const FormField = (props) => {
             return id === "studyType" ? "Degree Type" : id.charAt(0).toUpperCase() + id.slice(1) + " (optional)"
         }
     }
-    // else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email))
+
     const validatePhoneNumberAndMail = (id, fieldValue) => {
         if(id === "phone" && fieldValue.length > 0){
             if(fieldValue.length <10){
@@ -26,9 +27,7 @@ const FormField = (props) => {
             }
         }
         if(id === "email" && fieldValue.length > 0){
-            // if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(fieldValue.value)){
-            //     return "Invalid email address"
-            // }
+            // was gonna use the useformik hook to validate the email but it was not working
             if(!fieldValue.includes("@") && !fieldValue.includes(".")){
                 return "Email not vaild"
             }

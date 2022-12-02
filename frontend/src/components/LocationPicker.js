@@ -5,6 +5,7 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import { Country, State, City } from "country-state-city";
 
+// generate a location picker field textbox on the from on the right side
 const LocationPicker = (props) => {
 
     const countries = Country.getAllCountries();

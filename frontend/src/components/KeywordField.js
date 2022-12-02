@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import "../css/KeywordField.css";
 import { getHint, checkRequiredField } from './Utils'
 
+// generate a textbox field on the from on the right side
 const KeywordField = (props) => {
     const { id, title, index, fieldValue, onUpdateChange, onAddKeyword, onDeleteKeyword } = props;
     const [keywordInput, setKeywordInput] = React.useState("");

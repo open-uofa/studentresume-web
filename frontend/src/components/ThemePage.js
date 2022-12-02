@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDropzone } from 'react-dropzone';
 import fileIcon from '../img/file_icon.png';
 
-
+// theme page lets the user choose a theme for their resume
 const ThemePage = (props) => {
 
     const navigate = useNavigate();
@@ -95,6 +95,7 @@ const ThemePage = (props) => {
                 <h5 className='drag_drop_text2' style={{ textAlign: 'center', margin: '2%', marginBottom: '3%', fontSize: '45px', color: '#464646' }}>Choose a Default Theme:</h5>
 
 
+                {/* three defult themes below inside the box */}
                 <Box sx={{
                     width: '94%',
                     height: '55%',
@@ -104,7 +105,7 @@ const ThemePage = (props) => {
                 }}
                 >
 
-
+                    {/* theme 1 */}
                     <Box
                         id='theme1'
                         onClick={() => generateResume(1)}
@@ -122,6 +123,8 @@ const ThemePage = (props) => {
                         <img src={theme1} alt='' width={'100%'} height={'100%'}></img>
 
                     </Box>
+
+                    {/* theme 3 */}
                     <Box
                         id='theme3'
                         onClick={() => generateResume(3)}
@@ -142,6 +145,8 @@ const ThemePage = (props) => {
 
 
                     </Box>
+
+                    {/* theme 2 */}
                     <Box
                         id='theme2'
                         onClick={() => generateResume(2)}
@@ -175,6 +180,9 @@ const ThemePage = (props) => {
                     }}
                     >
                         
+
+                        {/* drop box for custom theme file */}
+                        {/* currently under construction - developers */}
 
                         <div className="center">
                             {/* Drag Box */}

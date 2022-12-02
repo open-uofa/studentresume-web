@@ -7,7 +7,7 @@ import { validateForm } from '../actions/forms';
 import resume from '../img/resume.png';
 import fileIcon from '../img/file_icon.png';
 
-
+// the start page of the website
 const Mainpage = (props) => {
     const { setUploading, setState, onSavingLocalStorage } = props;
 
@@ -77,6 +77,7 @@ const Mainpage = (props) => {
                     justifyContent: 'space-evenly',
                 }}
                 >
+                    {/* button to the form page */}
                     <Link to={isMobile ? '/form-mobile' : 'form'} style={{
                         width: '30em',
                         maxWidth: '90%',
@@ -146,6 +147,7 @@ const Mainpage = (props) => {
                             textAlign: 'center',
                         }}
                         >
+                            {/* the drop box for uploading json file */}
                             <div className="center">
                                 <div className='drag_drop_text2' style={{ textAlign: 'center', margin: '2%', marginBottom: '4%', fontSize: '15px', color: '#464646' }}>Only JSON files are allowed</div>
                                 {/* Drag Box */}

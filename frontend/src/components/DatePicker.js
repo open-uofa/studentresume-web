@@ -3,6 +3,7 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import TextField from '@mui/material/TextField';
 
+// returns a date picker box that will be used in the form
 const DatePicker = (props) => {
     const { id, title, index, fieldValue, onUpdateChange } = props;
     return (

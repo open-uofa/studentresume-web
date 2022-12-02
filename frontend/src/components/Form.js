@@ -8,11 +8,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import { MaximizeTwoTone } from '@mui/icons-material';
 
+// generates a button colums on the right side of the form
 const Form = (props) => {
     const { title, sectionData, onUpdateChange, onAddEntry, onDeleteEntry, onAddKeyword, onDeleteKeyword, btnId } = props;
-
-    // call the validate_input function to check if the input is valid but dont know where's the return data
-    // validate_input(json_data);
 
     return (
         <div className="Form" hidden={!(title === btnId)}
@@ -46,7 +44,6 @@ const Form = (props) => {
                                     // if the key is date, then render a date picker field
                                     if (key === 'startDate' || key === 'endDate' || key === 'releaseDate' || key === 'date') {
                                         return (
-                                            // <DatePicker id={key} key={key} title={title} fieldValue={entry[key]} onUpdateChange={onUpdateChange} />
                                             <DatePicker id={key} key={key} index={index} title={title} fieldValue={entry[key]} onUpdateChange={onUpdateChange} />
                                         );
                                     }
