@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import { getHint, checkRequiredField } from './Utils'
 import KeywordField from './KeywordField';
 import LocationPicker from './LocationPicker';
+// import { useFormik } from 'formik';
 
 const FormField = (props) => {
     const { id, title, index, fieldValue, onUpdateChange, onAddKeyword, onDeleteKeyword } = props;
@@ -16,17 +17,20 @@ const FormField = (props) => {
             return id === "studyType" ? "Degree Type" : id.charAt(0).toUpperCase() + id.slice(1) + " (optional)"
         }
     }
-
+    // else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email))
     const validatePhoneNumberAndMail = (id, fieldValue) => {
         if(id === "phone" && fieldValue.length > 0){
-            if(fieldValue.length !== 10){
+            if(fieldValue.length <10){
                 console.log (fieldValue.value)
-                return "Phone number must be 10 digits"
+                return "Phone number must be at least 10 digits"
             }
         }
         if(id === "email" && fieldValue.length > 0){
-            if(!fieldValue.includes("@")){
-                return "Email must contain @qmul.ac.uk"
+            // if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(fieldValue.value)){
+            //     return "Invalid email address"
+            // }
+            if(!fieldValue.includes("@") && !fieldValue.includes(".")){
+                return "Email not vaild"
             }
         }
         if(id === 'url' && fieldValue.length > 0){
