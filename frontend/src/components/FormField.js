@@ -20,20 +20,23 @@ const FormField = (props) => {
     }
 
     const validatePhoneNumberAndMail = (id, fieldValue) => {
+        // validate phone number
         if(id === "phone" && fieldValue.length > 0){
             if(fieldValue.length <10){
                 console.log (fieldValue.value)
                 return "Phone number must be at least 10 digits"
             }
         }
+        // validate email
         if(id === "email" && fieldValue.length > 0){
             // was gonna use the useformik hook to validate the email but it was not working
-            if(!fieldValue.includes("@") && !fieldValue.includes(".")){
+            if((!fieldValue.includes("@")) || (!fieldValue.includes("."))){
                 return "Email not vaild"
             }
         }
+        // validate url
         if(id === 'url' && fieldValue.length > 0){
-            if(!fieldValue.includes(".") && !fieldValue.includes("/")){
+            if((!fieldValue.includes(".")) || (!fieldValue.includes("/"))){
                 return "Invaild URL"
             }
         }
