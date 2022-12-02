@@ -190,7 +190,7 @@ const ThemePage = (props) => {
 
 
 
-            <h1 style={{ fontSize: '0.1px' }} onClick={goToPreview} data-testid={"previewPageBTN"}>This is for testing purposes only</h1>
+            <h1 style={{ fontSize: '0.1px',  color: "#f9f6f2" }} onClick={goToPreview} data-testid={"previewPageBTN"}>This is for testing purposes only</h1>
 
         </div>
 

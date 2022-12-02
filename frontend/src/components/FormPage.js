@@ -148,8 +148,8 @@ const FormPage = (props) => {
                                                     key === "work" ? "Experience" : key}
                                                 {sectionComplete[key] !== -1 &&
                                                     sectionComplete[key] === true ? (
-                                                    <CheckIcon style={{ color: "green", position: "absolute", right: "0.4em", top: "0.4em", border: "2px solid", borderColor: sectionComplete[key] === true ? "green" : "red", borderRadius: "50%" }} />
-                                                ) : (<ClearIcon style={{ color: "red", position: "absolute", right: "0.4em", top: "0.4em", border: "2px solid", borderColor: sectionComplete[key] === true ? "green" : "red", borderRadius: "50%" }} />
+                                                    <CheckIcon data-testid={"CheckMark"} style={{ color: "green", position: "absolute", right: "0.4em", top: "0.4em", border: "2px solid", borderColor: sectionComplete[key] === true ? "green" : "red", borderRadius: "50%" }} />
+                                                ) : (<ClearIcon data-testid={"CheckMark"} style={{ color: "red", position: "absolute", right: "0.4em", top: "0.4em", border: "2px solid", borderColor: sectionComplete[key] === true ? "green" : "red", borderRadius: "50%" }} />
                                                 )}
                                             </Button>
                                         </Fragment>
@@ -243,7 +243,7 @@ const FormPage = (props) => {
                 </div>
 
             </Fragment>
-            <h1 style={{ fontSize: '0.1px' }} onClick={goToReview} data-testid={"FormPageContinueBTN"}>This is for testing purposes only</h1>
+            <h1 style={{ fontSize: '0.1px', color: "#f9f6f2" }} onClick={goToReview} data-testid={"FormPageContinueBTN"}>This is for testing purposes only</h1>
         </div>
 
     );

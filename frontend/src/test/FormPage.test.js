@@ -10,7 +10,7 @@ test('Changes form when clicked on a different btn', () => {
     userEvent.click(button);
     const button2 = screen.getByTestId('basicsBTN')
     userEvent.click(button2);
-    expect(screen.getByText('Location (optional)')).toBeInTheDocument();
+    expect(screen.getByText('Location')).toBeInTheDocument();
     const button3 = screen.getByTestId('publicationsBTN')
     userEvent.click(button3);
     expect(screen.getByText('Publisher')).toBeInTheDocument();
@@ -18,7 +18,7 @@ test('Changes form when clicked on a different btn', () => {
 
 test('Testing reset changes color button', () => {
     render(<App />);
-    const icon = screen.getByTestId('CheckMark');
+    const icon = screen.getAllByTestId('CheckMark')[1];
     expect(icon).toHaveStyle({ color: 'red' });
 })
 
