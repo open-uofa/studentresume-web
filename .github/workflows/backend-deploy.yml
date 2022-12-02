@@ -1,0 +1,28 @@
+name: backend-deploy
+on: [push, pull_request]
+jobs:
+  # test:
+  #   ...
+  deploy:
+    name: "Deploy to backend instance"
+    runs-on: self-hosted
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # needs: test
+    steps:
+      - name: Stop the container
+        run: sudo docker stop mycontainer
+
+      - name: Delete the container
+        run: sudo docker rm mycontainer
+
+      - name: Delete the image
+        run: sudo docker rmi myimage
+
+      - name: Update local repo
+        run: cd studentresume-web && git fetch && git reset --hard origin/main
+
+      - name: Build the image
+        run: cd studentresume-web/api && sudo docker build -t myimage .
+
+      - name: Run the image
+        run: sudo docker run -d --restart=always --name mycontainer -p 8080:8080 -e PORT="8080" myimage
