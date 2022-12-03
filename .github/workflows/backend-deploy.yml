@@ -19,10 +19,10 @@ jobs:
       #   run: sudo docker rmi myimage
 
       # - name: Update local repo
-      #   run: cd studentresume-web && git fetch && git reset --hard origin/main
+      #   run: cd /mnt/extra_volume/studentresume-web && git fetch && git reset --hard origin/main
 
       # - name: Build the image
-      #   run: cd studentresume-web/api && sudo docker build -t myimage .
+      #   run: cd /mnt/extra_volume/studentresume-web/api && sudo docker build -t myimage .
 
       # - name: Run the image
-      #   run: sudo docker run -d --restart=always --name mycontainer -p 8080:8080 -e PORT="8080" myimage
+      #   run: sudo docker run -d --name mycontainer -p 8080:8080 -e PORT="8080" myimage
