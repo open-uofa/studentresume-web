@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from json import loads
 from studentresume.resume import Resume
 from studentresume.json_validator import is_valid_resume, is_valid_theme
-from studentresume.cli import get_file
+from studentresume.run import get_file
 
 try:
     from .model import ResumeSchema
