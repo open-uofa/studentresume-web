@@ -9,20 +9,20 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     # needs: test
     steps:
-      # - name: Stop the container
-      #   run: sudo docker stop mycontainer
+      - name: Stop the container
+        run: sudo docker stop mycontainer
 
-      # - name: Delete the container
-      #   run: sudo docker rm mycontainer
+      - name: Delete the container
+        run: sudo docker rm mycontainer
 
-      # - name: Delete the image
-      #   run: sudo docker rmi myimage
+      - name: Delete the image
+        run: sudo docker rmi myimage
 
-      # - name: Update local repo
-      #   run: cd /mnt/extra_volume/studentresume-web && git fetch && git reset --hard origin/main
+      - name: Update local repo
+        run: cd /mnt/extra_volume/studentresume-web && git fetch && git reset --hard origin/main
 
-      # - name: Build the image
-      #   run: cd /mnt/extra_volume/studentresume-web/api && sudo docker build -t myimage .
+      - name: Build the image
+        run: cd /mnt/extra_volume/studentresume-web/api && sudo docker build -t myimage .
 
-      # - name: Run the image
-      #   run: sudo docker run -d --name mycontainer -p 8080:8080 -e PORT="8080" myimage
+      - name: Run the image
+        run: sudo docker run -d --restart unless-stopped --name mycontainer -p 8080:8080 -e PORT="8080" myimage
