@@ -10,6 +10,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import fileDownload from 'js-file-download'
 import { validateForm } from '../actions/forms';
+import AlertDialog from './ResetButton';
 
 // this is thhe whole form page that contains all the sections and textbox
 const FormPage = (props) => {
@@ -109,20 +110,9 @@ const FormPage = (props) => {
                         <Box textAlign="center" sx={{ width: 1, textAlign: 'left', margin: '0.5em', marginLeft: "50px" }}>
                             <div style={{ display: 'flex' }}>
                                 <h1 style={{ marginLeft: "5px" }} >Mandatory sections</h1>
-                                <Button
-                                    data-testid={"resetFormBTN"}
-                                    style={{
-                                        width: 'auto',
-                                        height: '1.5em',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        margin: 'auto',
-                                        marginTop: '2.5em',
-                                    }}
-                                    id='resetForm'
-                                    onClick={() => handleReset()}>
-                                    Reset
-                                </Button>
+                                <AlertDialog
+                                    handleReset={handleReset} 
+                                />
                             </div>
                             {Object.keys(props.userData).map((key) => {
                                 if (key === "basics" || key === "profiles" || key === "education" || key === "skills") {
