@@ -19,7 +19,7 @@ const DatePicker = (props) => {
                     id={id}
                     variant="outlined"
                     inputFormat="YYYY-MM"
-                    value={fieldValue}
+                    value={fieldValue || null}
                     onChange={(e) => onUpdateChange(title, index, id, e.toISOString().split('T')[0])}
                     renderInput={(params) => <TextField id={id} {...params} inputProps={
                         {
