@@ -38,8 +38,8 @@ def resume(resume_schema_object: ResumeSchema):
 
     json_string: str = resume_schema_object.json(exclude_none=True, by_alias=True)
     print(json_string)
-
-    if is_valid_resume(json_string):
+    resume=Resume(False)
+    if is_valid_resume(json_string) and resume.required_fields_worker(loads(json_string)) == True:
         return {"message": "Valid Resume"}
 
     return {"message": "Invalid Resume"}
