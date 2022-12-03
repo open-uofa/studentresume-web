@@ -17,20 +17,39 @@
 }
 
 .about-project {
-    width: 70em;
+    width: 66em;
     max-width: 90%;
-    height: 30em;
+    margin-bottom: 5em;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 25px 25px 50px rgba(9, 148, 255, 0.25),
         -10px -10px 30px rgba(9, 148, 255, 0.1),
         inset -5px -5px 15px rgba(9, 148, 255, 0.5);
     justify-content: center;
+    padding: 1em;
+    padding-bottom: 2em;
+}
+
+.about-project h2 {
+    margin: 1em;
+    margin-bottom: 0.5em;
+    color: #0994ff;
+}
+
+.about-project p{
+    margin: 1em;
+    margin-left: 1.5em;
+    margin-right: 2em;
+    font-size: 18px;
+}
+
+.about-project a{
+    color: #0994ff;
 }
 
 .about-team {
     min-height: auto;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

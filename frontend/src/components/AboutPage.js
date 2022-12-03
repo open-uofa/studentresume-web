@@ -53,9 +53,40 @@ const AboutPage = () => {
                     )
                 })}
             </div>
+
             <div className='about-project'>
-                Want to contribute?
-                Student Resume Generator is an open-source project of UofA Open.
+                <h2>About the project</h2>
+                <p>
+                    Student Resume Generator is an open-source project of <a href="https://cmput401.ca/">UofA Open</a> developed in class CMPUT 401 FALL 2022.
+                    Our open-source project objective is to develop a free and powerful resume generator for university students.
+                </p>
+                <ul>
+                    - Intuitive UI and easy to start with.
+                </ul>
+                <ul>
+                    - Save form in JSON format and upload to continue.
+                </ul>
+                <ul>
+                    - Auto save to local storage and won't lose your progress.
+                </ul>
+                <ul>
+                    - Free template themes to use and custom themes allowed.
+                </ul>
+                <ul>
+                    - Preview and download resume in PDF format.
+                </ul>
+
+                <h2>As a developer</h2>
+                <p>
+                    Want to contribute? Check out our job requirement <a href="">here</a> and keep contributing to it!
+                </p>
+                <h2>Use pip package</h2>
+                <ul>
+                    - pip install studentresume
+                </ul>
+                <p>
+                    Read more about the package <a href="https://pypi.org/project/studentresume/">here</a>.
+                </p>
             </div>
         </div>
     );
