@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from json import loads
 from studentresume.resume import Resume
 from studentresume.json_validator import is_valid_resume, is_valid_theme
-from studentresume.cli import get_file
+from studentresume.run import get_file
 
 try:
     from .model import ResumeSchema
@@ -38,8 +38,8 @@ def resume(resume_schema_object: ResumeSchema):
 
     json_string: str = resume_schema_object.json(exclude_none=True, by_alias=True)
     print(json_string)
-
-    if is_valid_resume(json_string):
+    resume=Resume(False)
+    if is_valid_resume(json_string) and resume.required_fields_worker(loads(json_string)) == True:
         return {"message": "Valid Resume"}
 
     return {"message": "Invalid Resume"}
