@@ -130,6 +130,7 @@
     color: #0994ff;
     font-size: 1.15em;
     border-radius: 15px;
+    border: none;
     box-shadow: 5px 5px 10px rgba(9, 148, 255, 0.25),
         -2px -2px 5px rgba(9, 148, 255, 0.05),
         inset -2px -2px 5px rgba(9, 148, 255, 0.25);

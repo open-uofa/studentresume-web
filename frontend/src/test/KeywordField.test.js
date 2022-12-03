@@ -8,10 +8,14 @@ test('Test add new skill keyword', () => {
     const button = screen.getByTestId('goToForm')
     userEvent.click(button);
 
+    const button2 = screen.getByTestId('skills0keywordsBTN');
+
     const textField = screen.getByTestId('skills0keywordsINPUT').querySelector('input')
     expect(textField).toBeInTheDocument();
 
-    const button2 = screen.getByTestId('skills0keywordsBTN');
+    fireEvent.change(textField, { target: { value: 'new skill' } });
+    userEvent.click(button2);
+
     const num = screen.getAllByTestId('skillKeyword').length;
 
     // add skill keyword
@@ -26,10 +30,14 @@ test('Test add new skill keyword', () => {
 test('Test remove skill keyword', () => {
     render(<App />);
 
+    const button2 = screen.getByTestId('skills0keywordsBTN');
+
     const textField = screen.getByTestId('skills0keywordsINPUT').querySelector('input')
     expect(textField).toBeInTheDocument();
 
-    const button2 = screen.getByTestId('skills0keywordsBTN');
+    fireEvent.change(textField, { target: { value: 'new skill' } });
+    userEvent.click(button2);
+
     const num = screen.getAllByTestId('skillKeyword').length;
 
     fireEvent.change(textField, { target: { value: 'new skill' } });
