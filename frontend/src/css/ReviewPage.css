@@ -1,0 +1,6 @@
+.review-page {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: #f9f6f2;
+}

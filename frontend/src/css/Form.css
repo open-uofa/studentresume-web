@@ -1,0 +1,42 @@
+.Form {
+    width: 47em;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.section-title {
+    width: 100%;
+    display: flex;
+}
+
+.section-body {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    flex-wrap: wrap;
+}
+
+.section-entry {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.textField,
+.dateField {
+    width: 18em;
+    max-width: 100%;
+}
+
+.contentField {
+    width: 37em;
+    max-width: 100%;
+}
+
+.fieldName {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
