@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import '../css/Mainpage.css';
 import { Link, useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
-import { validateForm } from '../actions/forms';
+import { validateFormIncomplete } from '../actions/forms';
 import resume from '../img/resume.png';
 import fileIcon from '../img/file_icon.png';
 
@@ -27,7 +27,7 @@ const Mainpage = (props) => {
                 const data = reader.result;
                 setUploading(true);
                 let isValid = false;
-                validateForm(data).then((res) => {
+                validateFormIncomplete(data).then((res) => {
                     isValid = res.data['message'] === 'Valid Resume';
                     if (isValid) {
                         setState(JSON.parse(data));
