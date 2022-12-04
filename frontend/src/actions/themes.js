@@ -1,12 +1,14 @@
 import axios from "axios";
+import fileDownload from 'js-file-download'
 
-export const customTheme = (formData, themeData) => {
+
+export const customTheme = (data) => {
     // send form data to backend
     return new Promise((resolve, reject) => {
-        // const json_data = JSON.stringify(data);
+        // theme_json = JSON.stringify(theme_json);
         // console.log("sending data: ", json_data);
         // axios.post("http://localhost:8000/resume?theme=" + themeNum, data, {
-        axios.post('http://[2605:fd00:4:1001:f816:3eff:fe21:fc]/resume/theme',formData,themeData, {
+        axios.post('https://curtiskennedy.com/resume/custom',data, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -15,7 +17,7 @@ export const customTheme = (formData, themeData) => {
                 resolve(res);
             })
             .catch(() => {
-                axios.post('http://10.2.14.2/resume?theme=' + themeNum, formData, {
+                axios.post('http://10.2.9.18/resume/custom' ,data, {
                     headers: {
                         'Content-Type': 'application/json'
                     }
