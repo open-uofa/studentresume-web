@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import '../css/AboutPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -93,6 +94,11 @@ const AboutPage = () => {
                     Read more about the pip package <a href="https://pypi.org/project/studentresume/">here</a>.
                 </p>
             </div>
+            <Link style={{ textDecoration: 'none', display: 'flex', flexBasis: '80%', justifyContent: 'center', margin: '1em', marginBottom: '5em' }} to='/'>
+                <Button className='about-back-btn'>
+                    back to use
+                </Button>
+            </Link>
         </div>
     );
 }

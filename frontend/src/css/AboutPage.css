@@ -18,8 +18,7 @@
 
 .about-project {
     width: 66em;
-    max-width: 90%;
-    margin-bottom: 5em;
+    max-width: 80%;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 25px 25px 50px rgba(9, 148, 255, 0.25),
@@ -36,14 +35,14 @@
     color: #0994ff;
 }
 
-.about-project p{
+.about-project p {
     margin: 1em;
     margin-left: 1.5em;
     margin-right: 2em;
     font-size: 18px;
 }
 
-.about-project a{
+.about-project a {
     color: #0994ff;
 }
 
@@ -138,4 +137,18 @@
 
 .about-btn:hover {
     transform: scale(1.05);
+}
+
+.about-back-btn {
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 2em auto;
+    margin-bottom: 5em;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 1.15em;
+    box-shadow: 5px 5px 10px rgba(9, 148, 255, 0.25),
+        -2px -2px 5px rgba(9, 148, 255, 0.05),
+        inset -2px -2px 5px rgba(9, 148, 255, 0.25);
 }
