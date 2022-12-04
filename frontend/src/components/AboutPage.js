@@ -76,16 +76,21 @@ const AboutPage = () => {
                     - Preview and download resume in PDF format.
                 </ul>
 
+                <h2> As a user </h2>
+                <p>
+                    Want to know how to use the app? Check out our user guide <a href="https://docs.google.com/document/d/1x-0QSlkM54YVn0gjceryo7ZhRcZOUs2LfYqc7V2LvGU/edit?usp=sharing">here</a>!
+                </p>
+
                 <h2>As a developer</h2>
                 <p>
-                    Want to contribute? Check out our job requirement <a href="">here</a> and keep contributing to it!
+                    Want to contribute? Check out our job requirement <a href="https://docs.google.com/document/d/1x-0QSlkM54YVn0gjceryo7ZhRcZOUs2LfYqc7V2LvGU/edit?usp=sharing">here</a> and keep contributing to it!
                 </p>
                 <h2>Use pip package</h2>
                 <ul>
                     - pip install studentresume
                 </ul>
                 <p>
-                    Read more about the package <a href="https://pypi.org/project/studentresume/">here</a>.
+                    Read more about the pip package <a href="https://pypi.org/project/studentresume/">here</a>.
                 </p>
             </div>
         </div>
