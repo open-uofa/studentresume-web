@@ -44,6 +44,15 @@ def resume(resume_schema_object: ResumeSchema):
 
     return {"message": "Invalid Resume"}
 
+@app.post("/validate/incomplete")
+def resume(resume_schema_object: ResumeSchema):
+
+    json_string: str = resume_schema_object.json(exclude_none=True, by_alias=True)
+    print(json_string)
+    if is_valid_resume(json_string):
+        return {"message": "Valid Resume"}
+
+    return {"message": "Invalid Resume"}
 
 @app.post("/resume")
 def resume(resume_schema_object: ResumeSchema, theme: int = 1):
