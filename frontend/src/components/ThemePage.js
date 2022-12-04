@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import theme1 from '../img/theme1.png';
 import theme2 from '../img/theme2.png';
@@ -6,13 +6,15 @@ import theme3 from '../img/theme3.png';
 import { submitForm } from '../actions/forms';
 import { useNavigate } from "react-router-dom";
 import { useDropzone } from 'react-dropzone';
+import { customTheme } from '../actions/themes';
+import fileDownload from 'js-file-download'
 import fileIcon from '../img/file_icon.png';
 
 // theme page lets the user choose a theme for their resume
 const ThemePage = (props) => {
 
     const navigate = useNavigate();
-    const { userData, setUploading, onSavingLocalStorage } = props;
+    const { userData, setUploading } = props;
 
     const generateResume = (themeNum) => {
 
@@ -37,31 +39,24 @@ const ThemePage = (props) => {
     const reader = new FileReader();
     const onDrop = (acceptedFiles) => {
         acceptedFiles.forEach((file) => {
-            reader.readAsText(file);
+            reader.readAsText(file, "UTF-8");
             reader.onabort = () => console.log('file reading was aborted');
             reader.onerror = () => console.log('file reading has failed');
             reader.onload = () => {
-                const data = reader.result;
-                //setUploading(true);
-                let isValid = false;
-                // validateForm(data).then((res) => {
-                //     isValid = res.data['message'] === 'Valid Resume';
-                //     if (isValid) {
-                //         setState(JSON.parse(data));
-                //         onSavingLocalStorage();
-                //         navigate('/form', { state: { type: 'upload' } });
-                //     }
-                //     else {
-                //         alert("Invalid JSON file");
-                //     }
-                //     setUploading(false);
-                // }).catch((err) => {
-                //     setTimeout(() => {
-                //         console.log(err);
-                //         alert("Invalid JSON file");
-                //         setUploading(false);
-                //     }, 500);
-                // });
+                const theme_json = JSON.parse(reader.result);
+                const resume_schema_object = userData;
+                let combined = {resume_schema_object, theme_json};
+                setUploading(true);
+                customTheme(combined).then((res) => {
+                    navigate('/preview', { state: { fileData: res.data } });
+                    setUploading(false);
+                }).catch((err) => {
+                    setTimeout(() => {
+                        console.log(err);
+                        alert("Invalid JSON Theme file");
+                        setUploading(false);
+                    }, 500);
+                });
             };
         });
     };
@@ -75,7 +70,7 @@ const ThemePage = (props) => {
         <div className='main_page'>
 
             {/*header */}
-            <h2 style={{ alignItems: 'left', marginLeft: '2%', marginTop: "1.5%", fontWeight: 'normal' }}><a href = "/" style={{textDecoration: 'none', color: 'black'}}>Student<b>Resume</b></a></h2>
+            <h2 style={{ alignItems: 'left', marginLeft: '2%', marginTop: "1.5%", fontWeight: 'normal' }}><a href="/" style={{ textDecoration: 'none', color: 'black' }}>Student<b>Resume</b></a></h2>
             {window.innerWidth > 500 && <p style={{ right: '2em', marginRight: '2%', marginTop: "1.5%", position: 'absolute' }} href="#doc_link">Never heard of JSON? Click <a data-testid={"docJSON"} href="https://www.json.org/json-en.html">here</a> for documentation</p>}
 
 
@@ -179,7 +174,7 @@ const ThemePage = (props) => {
                         textAlign: 'center',
                     }}
                     >
-                        
+
 
                         {/* drop box for custom theme file */}
                         {/* currently under construction - developers */}
@@ -187,7 +182,7 @@ const ThemePage = (props) => {
                         <div className="center">
                             {/* Drag Box */}
                             <div {...getRootProps()} className="drag_drop" data-testid="dragdrop">
-                                <input {...getInputProps()} />
+                                <input type="file" {...getInputProps()} />
                                 <img src={fileIcon} alt='' width={'30%'} height={'70%'}></img>
                                 <h5 style={{ textAlign: 'center', margin: '2%', marginBottom: '4%', fontSize: '15px', color: '#464646' }}>Drag and Drop your files here</h5>
                             </div>
@@ -198,7 +193,7 @@ const ThemePage = (props) => {
 
 
 
-            <h1 style={{ fontSize: '0.1px',  color: "#f9f6f2" }} onClick={goToPreview} data-testid={"previewPageBTN"}>This is for testing purposes only</h1>
+            <h1 style={{ fontSize: '0.1px', color: "#f9f6f2" }} onClick={goToPreview} data-testid={"previewPageBTN"}>This is for testing purposes only</h1>
 
         </div>
 
