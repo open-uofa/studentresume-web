@@ -30,8 +30,6 @@ const AboutPage = () => {
 
     const [contributor, setState] = React.useState(require("../constants/contributor.json"));
 
-    console.log(contributor)
-
     return (
         <div className='AboutPage'>
             <h1 className='about-title' id='heading'></h1>
@@ -58,7 +56,7 @@ const AboutPage = () => {
             <div className='about-project'>
                 <h2>About the project</h2>
                 <p>
-                    Student Resume Generator is an open-source project of <a href="https://cmput401.ca/">UofA Open</a> developed in class CMPUT 401 FALL 2022.
+                    Student Resume Generator is an open-source project of <a href="https://cmput401.ca/projects/0dec841d-01a3-452f-aea8-82caf9fb0b7b">UofA Open</a> developed in class CMPUT 401 FALL 2022.
                     Our open-source project objective is to develop a free and powerful resume generator for university students.
                 </p>
                 <ul>
