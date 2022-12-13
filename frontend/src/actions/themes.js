@@ -8,7 +8,7 @@ export const customTheme = (data) => {
         // theme_json = JSON.stringify(theme_json);
         // console.log("sending data: ", json_data);
         // axios.post("http://localhost:8000/resume?theme=" + themeNum, data, {
-        axios.post('https://curtiskennedy.com/resume/custom',data, {
+        axios.post('https://studentresume.duckdns.org/resume/custom',data, {
             headers: {
                 'Content-Type': 'application/json'
             }
